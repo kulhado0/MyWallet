@@ -29,6 +29,18 @@ export class AddRegistroDeCompraComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
   }
 
+  getLocalItens(){
+    // Pega os valores do localStorage
+    let Types = this.getLocalType().split(';');
+    let Receivers = this.getLocalRec().split(';');
+    let Values = this.getLocalVal().split(';');
+    let Datas = this.getLocalData().split(';');
+
+    // Adiciona em Dados para mostrar o histórico na tela
+    for (let i = 0; i < Types.length; i += 1)
+      this.Dados.push(Receivers[i], Types[i], Values[i], Datas[i].toString());
+  }
+
   ngOnInit() {
     this.RegisterForm = this.fb.group({
       Value: new FormControl(),
@@ -37,6 +49,8 @@ export class AddRegistroDeCompraComponent implements OnInit {
       Description: new FormControl(),
       Data: new FormControl()
     })  
+
+    this.getLocalItens();
   }
 
   Feedback(FG: NgForm){
@@ -75,20 +89,26 @@ export class AddRegistroDeCompraComponent implements OnInit {
   }
 
   getLocalVal(){
+    if (localStorage.getItem("Value") != null && this.Value == undefined)
+      return localStorage.getItem("Value");
     if (localStorage.getItem("Value") != null)
-      return this.Value + ';'+ localStorage.getItem("Value");
+      return this.Value.toString() + ';'+ localStorage.getItem("Value");
     else
-      return this.Value;
+      return this.Value.toString();
   }
 
   getLocalType(){
+    if (localStorage.getItem("Type") != null && this.Type == undefined)
+      return localStorage.getItem("Type");
     if (localStorage.getItem("Type") != null)
       return this.Type.toString() + ';'+ localStorage.getItem("Type");
     else
-      return this.Type;
+      return this.Type.toString();
   }
 
   getLocalRec(){
+    if (localStorage.getItem("Receiver") != null && this.Receiver == undefined)
+      return localStorage.getItem("Receiver");
     if (localStorage.getItem("Receiver") != null)
       return this.Receiver.toString() + ';'+ localStorage.getItem("Receiver");
     else
@@ -96,8 +116,10 @@ export class AddRegistroDeCompraComponent implements OnInit {
   }
 
   getLocalData(){
+    if (localStorage.getItem("Data") != null && this.Data == undefined)
+      return localStorage.getItem("Data");
     if (localStorage.getItem("Data") != null)
-      return this.Data + ';' + localStorage.getItem("Data");
+      return this.Data.toString() + ';'+ localStorage.getItem("Data");
     else
       return this.Data.toString();
   }
