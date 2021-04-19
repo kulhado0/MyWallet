@@ -180,7 +180,7 @@ export class MainChartComponent implements OnInit {
     //[ Valor, Ano, Mes, Dia]
     let year = dados[0];
     let mont = dados[1];
-    let month = parseInt(mont);
+    let month = parseInt(mont) - 1;
     console.log(dados);
     let day = dados[2];
 
