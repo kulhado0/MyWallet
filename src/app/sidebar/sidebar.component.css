@@ -1,0 +1,393 @@
+.sidebar .nav li:hover:not(.active)>a i,
+.sidebar .nav li:focus:not(.active)>a i,
+.off-canvas-sidebar .nav li:hover:not(.active)>a i,
+.off-canvas-sidebar .nav li:focus:not(.active)>a i {
+color: #ffffff;
+} 
+.sidebar-wrapper ul li div.collapse ul li div.collapse ul li a,
+.sidebar-wrapper ul li div.collapse ul li div.collapsing ul li a,
+.sidebar-wrapper ul li div.collapsing ul li div.collapse ul li a {
+margin-left: 25px;
+}
+.sidebar{
+  overflow-y: hidden;
+}
+.sidebar,
+.off-canvas-sidebar {
+background: #ba54f5;
+background: -webkit-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+background: -o-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+height: calc(100vh - 90px);
+width: 230px;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1;
+background-size: cover;
+background-position: center center;
+display: block;
+box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.6);
+margin-top: 80px;
+margin-left: 20px;
+border-radius: 5px;
+transition: 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+}
+.sidebar .nav,
+.off-canvas-sidebar .nav {
+margin-top: 20px;
+display: block;
+}
+.sidebar .nav li>a+div .nav,
+.off-canvas-sidebar .nav li>a+div .nav {
+margin-top: 5px;
+}
+.sidebar .nav li>a+div .nav li>a,
+.off-canvas-sidebar .nav li>a+div .nav li>a {
+margin-top: 0px;
+padding: 8px 8px;
+}
+.sidebar .nav li>a,
+.off-canvas-sidebar .nav li>a {
+margin: 10px 15px 0;
+border-radius: 30px;
+color: #ffffff;
+display: block;
+text-decoration: none;
+position: relative;
+text-transform: uppercase;
+cursor: pointer;
+font-size: 0.62475rem;
+padding: 10px 8px;
+line-height: 1.625rem;
+}
+.sidebar .nav li.active>a:not([data-toggle="collapse"]) i,
+.sidebar .nav li.active>a:not([data-toggle="collapse"]) p,
+.off-canvas-sidebar .nav li.active>a:not([data-toggle="collapse"]) i,
+.off-canvas-sidebar .nav li.active>a:not([data-toggle="collapse"]) p {
+color: white;
+}
+.sidebar .nav li.active>a:not([data-toggle="collapse"]):before,
+.off-canvas-sidebar .nav li.active>a:not([data-toggle="collapse"]):before {
+content: " ";
+position: absolute;
+height: 6px;
+width: 6px;
+top: 22px;
+left: -4px;
+background: #ffffff;
+border-radius: 50%;
+}
+.sidebar .nav i,
+.off-canvas-sidebar .nav i {
+font-size: 20px;
+float: left;
+margin-right: 12px;
+line-height: 30px;
+width: 34px;
+text-align: center;
+color: rgba(255, 255, 255, 0.8);
+position: relative;
+}
+.sidebar .logo,
+.off-canvas-sidebar .logo {
+position: relative;
+padding: 0.5rem 0.7rem;
+z-index: 4;
+}
+
+.sidebar .logo a.logo-mini,
+.off-canvas-sidebar .logo a.logo-mini {
+opacity: 1;
+float: left;
+width: 34px;
+text-align: center;
+margin-left: 10px;
+margin-right: 12px;
+}
+
+.sidebar .logo:after,
+.off-canvas-sidebar .logo:after {
+content: '';
+position: absolute;
+bottom: 0;
+right: 15px;
+height: 1px;
+width: calc(100% - 30px);
+background: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar .logo .simple-text,
+.off-canvas-sidebar .logo .simple-text {
+text-transform: uppercase;
+padding: 0.5rem 0;
+display: block;
+white-space: nowrap;
+color: #ffffff;
+text-decoration: none;
+font-weight: 400;
+line-height: 30px;
+overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+.sidebar {
+  position: fixed;
+  display: block;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  right: auto;
+  left: 0;
+  margin: 0;
+  border-radius: 0;
+  z-index: 1032;
+  visibility: visible;
+  overflow-y: visible;
+  padding: 0;
+  transition: 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  -webkit-transform: translate3d(-260px, 0, 0);
+  -moz-transform: translate3d(-260px, 0, 0);
+  -o-transform: translate3d(-260px, 0, 0);
+  -ms-transform: translate3d(-260px, 0, 0);
+  transform: translate3d(-260px, 0, 0);
+}
+}
+@font-face {
+  font-family: 'Nucleo';
+  src: url('../../assets/fonts/nucleo.eot');
+  src: url('../../assets/fonts/nucleo.eot') format('embedded-opentype'),
+    url('../../assets/fonts/nucleo.woff2') format('woff2'),
+    url('../../assets/fonts/nucleo.woff') format('woff'),
+    url('../../assets/fonts/nucleo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.tim-icons {
+  display: inline-block;
+  font: normal normal normal 1em/1 'Nucleo';
+  vertical-align: middle;
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.font-icon-detail {
+  text-align: center;
+  padding: 45px 0 30px;
+  border: 1px solid #e44cc4;
+  border-radius: .1875rem;
+  margin: 15px 0;
+  min-height: 168px;
+}
+@-webkit-keyframes tim-icons-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes tim-icons-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes tim-icons-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.icon-align-center::before {
+  content: "\ea03";
+}
+.icon-atom::before {
+  content: "\ea06";
+}
+.icon-bell-55::before {
+  content: "\ea0c";
+}
+.icon-caps-small::before {
+  content: "\ea16";
+}
+.icon-cart::before {
+  content: "\ea17";
+}
+.icon-chart-bar-32::before {
+  content: "\ea18";
+}
+.icon-chart-pie-36::before {
+  content: "\ea19";
+}
+.icon-chat-33::before {
+  content: "\ea1a";
+}
+.icon-check-2::before {
+  content: "\ea1b";
+}
+.icon-cloud-download-93::before {
+  content: "\ea1c";
+}
+.icon-cloud-upload-94::before {
+  content: "\ea1d";
+}
+.icon-coins::before {
+  content: "\ea1e";
+}
+.icon-compass-05::before {
+  content: "\ea1f";
+}
+.icon-controller::before {
+  content: "\ea20";
+}
+.icon-credit-card::before {
+  content: "\ea21";
+}
+.icon-delivery-fast::before {
+  content: "\ea22";
+}
+.icon-double-left::before {
+  content: "\ea23";
+}
+.icon-double-right::before {
+  content: "\ea24";
+}
+.icon-email-85::before {
+  content: "\ea25";
+}
+.icon-gift-2::before {
+  content: "\ea26";
+}
+.icon-globe-2::before {
+  content: "\ea27";
+}
+.icon-headphones::before {
+  content: "\ea28";
+}
+.icon-image-02::before {
+  content: "\ea2b";
+}
+.icon-istanbul::before {
+  content: "\ea2c";
+}
+.icon-key-25::before {
+  content: "\ea2d";
+}
+.icon-laptop::before {
+  content: "\ea2e";
+}
+.icon-light-3::before {
+  content: "\ea2f";
+}
+.icon-link-72::before {
+  content: "\ea30";
+}
+.icon-lock-circle::before {
+  content: "\ea31";
+}
+.icon-map-big::before {
+  content: "\ea32";
+}
+.icon-minimal-down::before {
+  content: "\ea33";
+}
+.icon-minimal-left::before {
+  content: "\ea34";
+}
+.icon-molecule-40::before {
+  content: "\ea38";
+}
+.icon-money-coins::before {
+  content: "\ea39";
+}
+.icon-notes::before {
+  content: "\ea3a";
+}
+.icon-palette::before {
+  content: "\ea3b";
+}
+.icon-paper::before {
+  content: "\ea3c";
+}
+.icon-pencil::before {
+  content: "\ea3d";
+}
+.icon-pin::before {
+  content: "\ea3e";
+}
+.icon-planet::before {
+  content: "\ea3f";
+}
+.icon-puzzle-10::before {
+  content: "\ea40";
+}
+.icon-single-02::before {
+  content: "\ea49";
+}
+.icon-sound-wave::before {
+  content: "\ea4b";
+}
+.icon-spaceship::before {
+  content: "\ea4c";
+}
+.icon-square-pin::before {
+  content: "\ea4d";
+}
+.icon-tap-02::before {
+  content: "\ea51";
+}
+.icon-tie-bow::before {
+  content: "\ea52";
+}
+.icon-volume-98::before {
+  content: "\ea5c";
+}
+.icon-wallet-43::before {
+  content: "\ea5d";
+}
+.icon-watch-time::before {
+  content: "\ea5e";
+}
+.icon-wifi::before {
+  content: "\ea5f";
+}
+.icon-world::before {
+  content: "\ea60";
+}
+.icon-zoom-split::before {
+  content: "\ea61";
+}
+.icon-refresh-01::before {
+  content: "\ea62";
+}
+.icon-refresh-02::before {
+  content: "\ea63";
+}
+.icon-shape-star::before {
+  content: "\ea64";
+}
+.icon-components::before {
+  content: "\ea65";
+}
